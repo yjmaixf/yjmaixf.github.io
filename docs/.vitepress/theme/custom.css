@@ -1,0 +1,77 @@
+:root {
+  --vp-c-brand-1: #2f7fe5;
+  --vp-c-brand-2: #1f6fce;
+  --vp-c-brand-3: #65a7ff;
+  --vp-button-brand-bg: #2f7fe5;
+  --vp-button-brand-hover-bg: #1f6fce;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #1d4ed8, #0f766e);
+}
+
+.VPHomeHero .image-bg {
+  background: linear-gradient(135deg, rgba(47, 127, 229, 0.26), rgba(31, 157, 117, 0.2));
+  filter: blur(38px);
+}
+
+.vp-doc h2 {
+  margin-top: 42px;
+}
+
+.doc-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.doc-card {
+  padding: 18px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.doc-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.doc-card p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+}
+
+.example-shell {
+  overflow: hidden;
+  margin: 24px 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+}
+
+.example-shell__head {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+}
+
+.example-shell__head strong {
+  display: block;
+}
+
+.example-shell__head span {
+  display: block;
+  margin-top: 4px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+.api-table {
+  width: 100%;
+  display: table;
+}
+
+@media (max-width: 720px) {
+  .doc-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

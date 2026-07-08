@@ -1,0 +1,64 @@
+{
+  "hash": "42391719",
+  "configHash": "c9dfdaf0",
+  "lockfileHash": "4a73a5cd",
+  "browserHash": "c44a70fc",
+  "optimized": {
+    "vue": {
+      "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "41721581",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "ab6b5c12",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "26c642b6",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/integrations/useFocusTrap": {
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
+      "fileHash": "1361cecc",
+      "needsInterop": false
+    },
+    "vitepress > mark.js/src/vanilla.js": {
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
+      "file": "vitepress___mark__js_src_vanilla__js.js",
+      "fileHash": "f99759b4",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "35956090",
+      "needsInterop": false
+    },
+    "openlayers2dsceneeditor": {
+      "src": "../../../../node_modules/openlayers2dsceneeditor/openlayers2dsceneeditor.js",
+      "file": "openlayers2dsceneeditor.js",
+      "fileHash": "4c2ec143",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-QAUAGEFW": {
+      "file": "chunk-QAUAGEFW.js"
+    },
+    "DemoWorkbench-6a8e00ef-JISI7ZE2": {
+      "file": "DemoWorkbench-6a8e00ef-JISI7ZE2.js"
+    },
+    "chunk-J2SAADDG": {
+      "file": "chunk-J2SAADDG.js"
+    },
+    "chunk-YRNSJHMG": {
+      "file": "chunk-YRNSJHMG.js"
+    }
+  }
+}
