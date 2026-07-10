@@ -16,9 +16,9 @@ const resourceOptions = {
 editor.setResourceOptions(resourceOptions);
 ```
 
-## 本站素材
+## 示例素材
 
-| 目录 | 说明 |
+| 资源 | 说明 |
 | --- | --- |
 | `/Sate/{z}/{x}/{y}.png` | 离线 XYZ 瓦片 |
 | `/data/geojson/*.json` | 世界、中国、国家边界 GeoJSON |

@@ -54,4 +54,4 @@ features:
   <LiveScenario variant="overview" />
 </ClientOnly>
 
-这块预览直接使用 `ScenarioEditor`、`createScenarioEditor()`、`public/Sate` 离线瓦片和 `public/two/images` 图标资源。
+这块预览直接使用 `ScenarioEditor`、`createScenarioEditor()`、离线瓦片和模型图标资源。

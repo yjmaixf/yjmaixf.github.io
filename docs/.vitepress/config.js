@@ -19,7 +19,6 @@ export default defineConfig({
       { text: "API", link: "/api/controller" },
       { text: "配置", link: "/config/resources" },
       { text: "Playground", link: "/playground" },
-      { text: "覆盖检查", link: "/coverage" },
       { text: "npm", link: "https://www.npmjs.com/package/openlayers2dsceneeditor" }
     ],
     sidebar: [
@@ -81,7 +80,6 @@ export default defineConfig({
         text: "更多",
         items: [
           { text: "Playground", link: "/playground" },
-          { text: "功能覆盖检查", link: "/coverage" },
           { text: "更新日志", link: "/changelog" }
         ]
       }
