@@ -1,0 +1,1 @@
+import{_ as d,o as e,c as a,a6 as o}from"./chunks/framework.B-2qg3-Z.js";const m=JSON.parse('{"title":"功能覆盖检查","description":"","frontmatter":{},"headers":[],"relativePath":"coverage.md","filePath":"coverage.md"}'),c={name:"coverage.md"};function r(s,t,i,n,l,p){return e(),a("div",null,[...t[0]||(t[0]=[o("",10)])])}const g=d(c,[["render",r]]);export{m as __pageData,g as default};
