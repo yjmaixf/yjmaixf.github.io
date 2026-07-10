@@ -1,5 +1,15 @@
 # 地图瓦片
 
+<div class="example-shell">
+  <div class="example-shell__head">
+    <strong>运行效果</strong>
+    <span>运行时添加或清空局部离线瓦片区域。</span>
+  </div>
+  <ClientOnly>
+    <ControllerRecipesScenario recipe="tiles" />
+  </ClientOnly>
+</div>
+
 ## XYZ 瓦片
 
 ```js

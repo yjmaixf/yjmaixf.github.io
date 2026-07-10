@@ -1,6 +1,6 @@
 # 更新日志
 
-## 0.1.7
+## 0.2.1
 
 - 明确推荐发布入口：`ScenarioEditor`、`createScenarioEditor()`、`style.css`。
 - README 补充架构边界、资源配置、地图初始化、模型 API、关系线、态势特效和显示配置。

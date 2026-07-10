@@ -5,10 +5,10 @@
 <div class="example-shell">
   <div class="example-shell__head">
     <strong>运行效果</strong>
-    <span>预览场景包含线和面标绘，便于说明距离和面积测量的使用场景。</span>
+    <span>点击“Measure”后在地图上点选路径，测量结果会通过日志和回调返回。</span>
   </div>
   <ClientOnly>
-    <LiveScenario variant="measure" />
+    <InteractiveScenario mode="measure" />
   </ClientOnly>
 </div>
 

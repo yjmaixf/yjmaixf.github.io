@@ -5,10 +5,10 @@
 <div class="example-shell">
   <div class="example-shell__head">
     <strong>运行效果</strong>
-    <span>加载红方雷达、红方导弹、蓝方舰船和蓝方飞机。</span>
+    <span>加载红方雷达、蓝方舰船和蓝方飞机，可直接部署模板、upsert 巡逻组、更新位置和聚焦模型。</span>
   </div>
   <ClientOnly>
-    <LiveScenario variant="models" />
+    <ControllerRecipesScenario recipe="models" />
   </ClientOnly>
 </div>
 
@@ -50,6 +50,44 @@ await editor.batchUpdateModels([
     }
   }
 ]);
+```
+
+## 模板部署与 upsert
+
+```js
+const draft = editor.createModelFromTemplate("aircraft", {
+  UID: "red_air_001",
+  lon: 116.3,
+  lat: 39.9,
+  nation: "red",
+  showName: "红方飞机"
+});
+
+await editor.addModel(draft);
+
+await editor.upsertModels([
+  {
+    UID: "red_patrol_001",
+    NodeType: "car",
+    modelType: "PLATFORM",
+    nation: "red",
+    lon: 116.38,
+    lat: 39.82
+  }
+]);
+```
+
+## 高频位置更新
+
+```js
+await editor.updateModelPosition("blue_ship_001", {
+  lon: 116.82,
+  lat: 40.08,
+  heading: 268,
+  speed: 12
+}, {
+  recordHistory: false
+});
 ```
 
 ## 参数说明

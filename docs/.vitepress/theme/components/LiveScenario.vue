@@ -171,6 +171,58 @@ const mountedModels = baseModels.map(model => {
   };
 });
 
+const effectModels = [
+  ...baseModels,
+  {
+    UID: "red_jammer_001",
+    showName: "Red Jammer",
+    name: "Red Jammer",
+    NodeType: "jammer",
+    iconKey: "default",
+    modelType: "JAMMER",
+    nation: "red",
+    lon: 116.08,
+    lat: 40.06,
+    heading: 120
+  },
+  {
+    UID: "blue_radar_001",
+    showName: "Blue Radar",
+    name: "Blue Radar",
+    NodeType: "radar",
+    iconKey: "default",
+    modelType: "RADAR",
+    nation: "blue",
+    lon: 116.92,
+    lat: 39.82,
+    heading: 260
+  },
+  {
+    UID: "white_sensor_001",
+    showName: "White Sensor",
+    name: "White Sensor",
+    NodeType: "radar",
+    iconKey: "default",
+    modelType: "SENSOR",
+    nation: "white",
+    lon: 116.5,
+    lat: 40.18,
+    heading: 180
+  },
+  {
+    UID: "blue_drone_001",
+    showName: "Blue Drone",
+    name: "Blue Drone",
+    NodeType: "b2",
+    iconKey: "b2",
+    modelType: "UAV",
+    nation: "blue",
+    lon: 116.88,
+    lat: 40.18,
+    heading: 220
+  }
+];
+
 const invalidModels = [
   {
     ...baseModels[0],
@@ -591,6 +643,38 @@ const effectList = [
     }
   },
   {
+    id: "detect_red_radar_blue_air",
+    type: "detect",
+    sourceUID: "red_radar_001",
+    geometry: { shape: "circle", radius: 90000 },
+    label: "Detect range",
+    style: { animation: "pulse" }
+  },
+  {
+    id: "warning_blue_radar_001",
+    type: "warning",
+    sourceUID: "blue_radar_001",
+    geometry: { shape: "circle", radius: 76000 },
+    label: "Warning area",
+    style: { animation: "pulse" }
+  },
+  {
+    id: "jammer_red_jammer_001",
+    type: "jammer",
+    sourceUID: "red_jammer_001",
+    geometry: { shape: "circle", radius: 82000 },
+    label: "Jammer",
+    style: { animation: "pulse" }
+  },
+  {
+    id: "weapon_red_missile_001",
+    type: "weapon",
+    sourceUID: "red_missile_001",
+    geometry: { shape: "circle", radius: 70000 },
+    label: "Weapon range",
+    style: { animation: "none" }
+  },
+  {
     id: "missile_red_missile_blue_ship",
     type: "missileFlight",
     sourceUID: "red_missile_001",
@@ -605,6 +689,92 @@ const effectList = [
     sourceUID: "blue_ship_001",
     geometry: { shape: "box", size: 64 },
     label: "Lock"
+  },
+  {
+    id: "link_red_radar_blue_ship",
+    type: "linkQuality",
+    sourceUID: "red_radar_001",
+    targetUID: "blue_ship_001",
+    geometry: { shape: "line", targetUID: "blue_ship_001" },
+    label: "Weak link",
+    style: { quality: "weak", width: 3 }
+  },
+  {
+    id: "damaged_blue_ship_001",
+    type: "damaged",
+    sourceUID: "blue_ship_001",
+    geometry: { shape: "circle", radius: 26000 },
+    label: "Damaged",
+    style: { animation: "pulse" }
+  },
+  {
+    id: "lost_blue_air_001",
+    type: "lost",
+    sourceUID: "blue_air_001",
+    geometry: { shape: "circle", radius: 22000 },
+    label: "Lost",
+    style: { animation: "pulse" }
+  },
+  {
+    id: "discovered_blue_drone_001",
+    type: "discovered",
+    sourceUID: "blue_drone_001",
+    geometry: { shape: "circle", radius: 18000 },
+    label: "Discovered"
+  },
+  {
+    id: "tracking_blue_drone_001",
+    type: "tracking",
+    sourceUID: "blue_drone_001",
+    geometry: { shape: "circle", radius: 30000 },
+    label: "Tracking"
+  },
+  {
+    id: "sensor_search_white_sensor_001",
+    type: "sensorSearch",
+    sourceUID: "white_sensor_001",
+    geometry: { shape: "sector", radius: 76000, angle: 100, direction: 180 },
+    label: "Sensor search",
+    style: { animation: "scan" }
+  },
+  {
+    id: "sensor_off_red_jammer_001",
+    type: "sensorOff",
+    sourceUID: "red_jammer_001",
+    geometry: { shape: "circle", radius: 26000 },
+    label: "Sensor off"
+  },
+  {
+    id: "sensor_suppressed_blue_radar_001",
+    type: "sensorSuppressed",
+    sourceUID: "blue_radar_001",
+    geometry: { shape: "circle", radius: 32000 },
+    label: "Suppressed"
+  },
+  {
+    id: "intercept_red_missile_blue_air",
+    type: "intercept",
+    sourceUID: "red_missile_001",
+    targetUID: "blue_air_001",
+    geometry: { shape: "line", targetUID: "blue_air_001" },
+    label: "Intercept",
+    style: { width: 4 }
+  },
+  {
+    id: "miss_blue_radar_red_jammer",
+    type: "miss",
+    sourceUID: "blue_radar_001",
+    targetUID: "red_jammer_001",
+    geometry: { shape: "line", targetUID: "red_jammer_001" },
+    label: "Miss",
+    style: { width: 3 }
+  },
+  {
+    id: "overlap_effect_area",
+    type: "overlap",
+    sourceUID: "white_sensor_001",
+    geometry: { shape: "circle", radius: 36000, lon: 116.62, lat: 40.02 },
+    label: "Overlap"
   }
 ];
 
@@ -635,8 +805,8 @@ const sceneByVariant = {
   },
   effects: {
     mode: "view",
-    models: baseModels,
-    relations: relationList.slice(0, 1),
+    models: effectModels,
+    relations: relationList,
     effects: effectList
   },
   routes: {

@@ -5,10 +5,10 @@
 <div class="example-shell">
   <div class="example-shell__head">
     <strong>运行效果</strong>
-    <span>蓝方飞机包含航路点，可用于回放和航迹展示。</span>
+    <span>给飞机写入航路，也可以直接开启交互式航路编辑。</span>
   </div>
   <ClientOnly>
-    <LiveScenario variant="routes" />
+    <ControllerRecipesScenario recipe="route" />
   </ClientOnly>
 </div>
 
@@ -27,6 +27,20 @@ await editor.updateModel("blue_air_001", {
     altitude: 8200
   }
 });
+```
+
+## 推荐 API
+
+```js
+await editor.setModelRoute("blue_air_001", [
+  { lon: 116.4, lat: 39.7, height: 8000, speed: 220 },
+  { lon: 116.6, lat: 39.8, height: 8200, speed: 230 },
+  { lon: 116.8, lat: 39.9, height: 8200, speed: 230 }
+], {
+  name: "巡航航路 A"
+});
+
+await editor.startRouteEdit("blue_air_001");
 ```
 
 ## 回放中的航迹

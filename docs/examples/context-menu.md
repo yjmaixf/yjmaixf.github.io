@@ -5,10 +5,10 @@
 <div class="example-shell">
   <div class="example-shell__head">
     <strong>运行效果</strong>
-    <span>在模型上右键可以打开自定义菜单，菜单项可按模型上下文显示。</span>
+    <span>点击“启用右键菜单”后，在模型上右键可以打开自定义菜单，并把选择同步到业务日志。</span>
   </div>
   <ClientOnly>
-    <LiveScenario variant="context-menu" />
+    <InteractiveScenario mode="context" />
   </ClientOnly>
 </div>
 
@@ -41,6 +41,20 @@ editor.setContextMenuItems([
 editor.setContextMenuHandler(payload => {
   console.log(payload.coordinate, payload.model);
 });
+```
+
+## 选择联动
+
+```js
+const offSelection = editor.onSelectionChange(feature => {
+  const uid = feature?.get?.("UID");
+  if (uid) {
+    editor.selectModel(uid);
+    updateSidePanel(uid);
+  }
+});
+
+offSelection();
 ```
 
 ## 菜单项字段

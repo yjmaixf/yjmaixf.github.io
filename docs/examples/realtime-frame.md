@@ -5,10 +5,10 @@
 <div class="example-shell">
   <div class="example-shell__head">
     <strong>运行效果</strong>
-    <span>预览场景同时包含模型、关系线和特效，适合说明实时态势帧的组合更新。</span>
+    <span>直接推送态势帧、启动模拟实时流、开启帧合并并手动刷新待合并帧。</span>
   </div>
   <ClientOnly>
-    <LiveScenario variant="realtime-frame" />
+    <ControllerRecipesScenario recipe="frame" />
   </ClientOnly>
 </div>
 

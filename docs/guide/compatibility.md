@@ -1,6 +1,6 @@
 # 版本兼容
 
-当前文档基于 npm 包 `openlayers2dsceneeditor@0.1.7` 整理。
+当前文档基于 npm 包 `openlayers2dsceneeditor@0.2.1` 整理。
 
 ## Peer Dependencies
 

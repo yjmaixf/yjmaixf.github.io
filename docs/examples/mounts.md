@@ -5,38 +5,38 @@
 <div class="example-shell">
   <div class="example-shell__head">
     <strong>运行效果</strong>
-    <span>蓝方飞机预置了传感器和武器载荷，可在场景数据中查看 mounts。</span>
+    <span>给飞机添加或移除导弹挂载，并通过运行时规则校验挂载兼容性。</span>
   </div>
   <ClientOnly>
-    <LiveScenario variant="mounts" />
+    <ControllerRecipesScenario recipe="mounts" />
   </ClientOnly>
 </div>
 
 ## 添加挂载
 
 ```js
-await editor.addMount("blue_air_001", {
-  UID: "sensor_payload_001",
-  showName: "EO Sensor",
-  NodeType: "sensor",
-  modelType: "PAYLOAD",
+await editor.addMount("recipe_air_001", {
+  UID: "recipe_missile_001",
+  showName: "训练导弹",
+  name: "训练导弹",
+  NodeType: "missile",
+  modelType: "MISSILE",
+  iconKey: "missile",
   mountable: true
-}, {
-  force: true
 });
 ```
 
 ## 移除挂载
 
 ```js
-await editor.removeMount("blue_air_001", "sensor_payload_001");
+await editor.removeMount("recipe_air_001", "recipe_missile_001");
 ```
 
 ## 配置兼容规则
 
 ```js
 editor.setMountCompatibility({
-  AIRCRAFT: ["PAYLOAD", "WEAPON"],
+  AIRCRAFT: ["MISSILE", "PAYLOAD", "WEAPON"],
   PLATFORM: ["PAYLOAD"]
 });
 ```

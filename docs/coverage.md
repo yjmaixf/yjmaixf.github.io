@@ -16,9 +16,9 @@
 | 关系线 | `/examples/relations` | 已覆盖，含预览 |
 | 态势特效 | `/examples/effects`、`/api/effect` | 已覆盖，含预览 |
 | 场景 JSON 导入导出、报告、截图 | `/examples/import-export` | 已覆盖，含预览 |
-| 标绘能力 | `/examples/annotations`、`/examples/annotations-advanced` | 已覆盖，含细分预览 |
-| 测量工具 | `/examples/measure`、`/examples/interactive` | 已覆盖，含真实交互 |
-| 右键菜单 | `/examples/context-menu`、`/examples/interactive` | 已覆盖，含真实交互 |
+| 标绘能力 | `/examples/annotations` | 已覆盖，含细分预览和真实交互 |
+| 测量工具 | `/examples/measure` | 已覆盖，含真实交互 |
+| 右键菜单 | `/examples/context-menu` | 已覆盖，含真实交互 |
 | 载荷挂载 | `/examples/mounts` | 已覆盖，含预览 |
 | 实时态势帧合并 | `/examples/realtime-frame`、`/config/performance` | 已覆盖，含预览 |
 | 校验与历史 | `/examples/validation-history`、`/examples/interactive` | 已覆盖，含真实交互 |
@@ -30,6 +30,7 @@
 | Controller API | `/api/controller` | 已覆盖 |
 | 场景、模型、特效结构 | `/api/scene`、`/api/model`、`/api/effect` | 已覆盖 |
 | 可运行总览 | `/playground`、首页预览 | 已覆盖 |
+| Controller 进阶能力：运行时规则、事件、多实例、局部瓦片、交互式批量变换 | 分散在 `/examples/models`、`/examples/routes`、`/examples/mounts`、`/examples/realtime-frame`、`/config/tiles`、`/guide/multi-instance`、`/api/controller` | 已覆盖，含交互示例 |
 
 ## 后续可继续增强
 

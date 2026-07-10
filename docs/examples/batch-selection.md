@@ -8,7 +8,7 @@
     <span>预置多个红方模型并同步批量选中状态，适合说明批量操作入口。</span>
   </div>
   <ClientOnly>
-    <InteractiveScenario />
+    <InteractiveScenario mode="batch" />
   </ClientOnly>
 </div>
 

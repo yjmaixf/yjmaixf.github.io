@@ -28,7 +28,8 @@ export default defineConfig({
         items: [
           { text: "快速开始", link: "/guide/getting-started" },
           { text: "设计边界", link: "/guide/boundary" },
-          { text: "版本兼容", link: "/guide/compatibility" }
+          { text: "版本兼容", link: "/guide/compatibility" },
+          { text: "多实例集成", link: "/guide/multi-instance" }
         ]
       },
       {
@@ -51,10 +52,8 @@ export default defineConfig({
         ]
       },
       {
-        text: "增强示例",
+        text: "专题示例",
         items: [
-          { text: "更细的标绘示例", link: "/examples/annotations-advanced" },
-          { text: "真实交互示例", link: "/examples/interactive" },
           { text: "大规模性能示例", link: "/examples/performance-large" },
           { text: "自定义模板体系", link: "/examples/custom-templates" }
         ]

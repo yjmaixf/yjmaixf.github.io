@@ -75,5 +75,6 @@ await editor.addModel({
 ## 下一步
 
 - 查看 [模型部署示例](/examples/models)
+- 查看 [多实例集成](/guide/multi-instance)
 - 查看 [资源路径配置](/config/resources)
 - 查看 [Controller API](/api/controller)
