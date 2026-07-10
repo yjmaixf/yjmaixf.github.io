@@ -1,1 +1,0 @@
-import{_ as i,o as t,c as a,a6 as d}from"./chunks/framework.B-2qg3-Z.js";const o=JSON.parse('{"title":"模型结构","description":"","frontmatter":{},"headers":[],"relativePath":"api/model.md","filePath":"api/model.md"}'),n={name:"api/model.md"};function e(h,s,l,p,k,E){return t(),a("div",null,[...s[0]||(s[0]=[d("",4)])])}const c=i(n,[["render",e]]);export{o as __pageData,c as default};
