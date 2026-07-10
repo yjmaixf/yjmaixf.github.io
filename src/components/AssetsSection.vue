@@ -7,7 +7,7 @@ import { assetRows } from "../data/siteContent";
     <div class="section-heading compact">
       <p class="section-kicker">Assets</p>
       <h2>内置素材可以直接撑起官网演示</h2>
-      <p>你提供的 public 资源已经适合展示离线地图、区域数据和红蓝白目标图标。</p>
+      <p>示例素材已经适合展示离线地图、区域数据和红蓝白目标图标。</p>
     </div>
 
     <div class="assets-panel">
