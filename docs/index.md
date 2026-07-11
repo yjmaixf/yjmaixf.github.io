@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: openlayers2dsceneeditor
-  text: Vue 3 + OpenLayers 二维想定编辑器
+  text: OpenLayers 二维想定编辑器
   tagline: 文档、可运行示例、API 入口和配置说明，面向模型部署、关系线、航路编辑、态势特效与回放。
   image:
     src: /two/images/blue/ship.png
@@ -24,7 +24,7 @@ features:
   - title: 可配置资源
     details: 宿主应用提供瓦片、图标、模板和标绘资源，组件库不绑定业务素材。
   - title: API 驱动
-    details: 通过 ScenarioEditor 和 createScenarioEditor() 组织 Vue 组件接入与业务控制。
+    details: 通过 createScenarioEditor() 组织 DOM 初始化、场景更新与业务控制。
 ---
 
 ## 文档结构
@@ -54,4 +54,4 @@ features:
   <LiveScenario variant="overview" />
 </ClientOnly>
 
-这块预览直接使用 `ScenarioEditor`、`createScenarioEditor()`、离线瓦片和模型图标资源。
+这块预览直接使用 `createScenarioEditor()`、离线瓦片和模型图标资源。

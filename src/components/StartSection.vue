@@ -8,7 +8,7 @@ import { installCode, usageCode } from "../data/siteContent";
       <p class="section-kicker">Get Started</p>
       <h2>几行配置接入真实二维场景</h2>
       <p>
-        安装包、引入样式、提供资源解析函数和地图初始化配置，就可以把 ScenarioEditor 放进业务页面。
+        安装正式版包、引入样式、提供资源解析函数和地图初始化配置，就可以通过 DOM target 创建 editor 实例。
       </p>
       <a class="primary-link" href="https://www.npmjs.com/package/openlayers2dsceneeditor" target="_blank" rel="noreferrer">
         查看 npm 包

@@ -8,7 +8,7 @@ export const navItems = [
 ];
 
 export const stats = [
-  { value: "Vue 3", label: "组件化接入" },
+  { value: "JS API", label: "无框架接入" },
   { value: "OpenLayers", label: "二维 GIS 底座" },
   { value: "0-6", label: "内置离线瓦片层级" },
   { value: "17+", label: "态势特效类型" }
@@ -86,12 +86,12 @@ export const assetRows = [
 
 export const architectureItems = [
   {
-    title: "ScenarioEditor",
-    text: "正式发布推荐入口，适合 Vue 页面直接嵌入。"
+    title: "createScenarioEditor()",
+    text: "1.0 推荐入口，宿主通过普通 DOM target 初始化并主动驱动地图场景。"
   },
   {
-    title: "createScenarioEditor()",
-    text: "宿主业务系统主动驱动地图场景的控制器入口。"
+    title: "createMapEngine()",
+    text: "高级入口，用于多实例、测试或自定义地图上下文。"
   },
   {
     title: "resourceOptions",
@@ -103,9 +103,9 @@ export const architectureItems = [
   }
 ];
 
-export const installCode = `npm i openlayers2dsceneeditor vue`;
+export const installCode = `npm i openlayers2dsceneeditor`;
 
-export const usageCode = `import ScenarioEditor from "openlayers2dsceneeditor";
+export const usageCode = `import { createScenarioEditor } from "openlayers2dsceneeditor";
 import "openlayers2dsceneeditor/style.css";
 
 const resourceOptions = {
@@ -119,4 +119,13 @@ const mapOptions = {
   zoom: 5,
   minZoom: 0,
   maxZoom: 18
-};`;
+};
+
+const editor = createScenarioEditor();
+
+editor.setResourceOptions(resourceOptions);
+
+await editor.init({
+  target: document.getElementById("map"),
+  ...mapOptions
+});`;

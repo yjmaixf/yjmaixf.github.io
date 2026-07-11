@@ -12,7 +12,7 @@
     "site:preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {
-    "openlayers2dsceneeditor": "^0.2.1",
+    "openlayers2dsceneeditor": "^1.0.0",
     "vue": "^3.5.22"
   },
   "devDependencies": {

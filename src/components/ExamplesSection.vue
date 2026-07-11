@@ -10,7 +10,7 @@ const activeId = ref(exampleGroups[0].id);
     <div class="section-heading">
       <p class="section-kicker">Examples</p>
       <h2>按功能拆开的使用示例</h2>
-      <p>保留正式官网的首页形态，同时补充组件库用户真正需要的接入说明、代码示例和参数表。</p>
+      <p>围绕 1.0 正式版的 DOM 初始化、控制器 API、资源配置和业务集成方式整理示例。</p>
     </div>
 
     <div class="examples-layout">

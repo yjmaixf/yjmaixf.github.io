@@ -23,8 +23,9 @@
 
 推荐作为正式发布入口使用：
 
-- `ScenarioEditor`
 - `createScenarioEditor()`
+- `createMapEngine()`
+- `createMapContext()`
 - `openlayers2dsceneeditor/style.css`
 
 兼容层仍保留但不建议新项目依赖：
@@ -36,6 +37,6 @@
 
 ## 接入建议
 
-业务系统应该围绕 `ScenarioEditor` 组件或 `createScenarioEditor()` 返回的 editor 实例组织调用。
+业务系统应该围绕 `createScenarioEditor()` 返回的 editor 实例组织调用，并通过 `editor.init({ target })` 绑定普通 DOM 容器。
 
 不要直接修改内部 `sceneStore` 状态。需要改变场景时，通过公开 API 更新模型、关系线、特效和显示配置。

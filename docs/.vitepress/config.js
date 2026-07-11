@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   title: "openlayers2dsceneeditor",
-  description: "Vue 3 and OpenLayers 2D scenario editor documentation",
+  description: "OpenLayers 2D scenario editor JavaScript library documentation",
   lang: "zh-CN",
   cleanUrls: true,
   srcDir: ".",
@@ -104,6 +104,9 @@ export default defineConfig({
     }
   },
   vite: {
-    publicDir: resolve(__dirname, "../../public")
+    publicDir: resolve(__dirname, "../../public"),
+    optimizeDeps: {
+      exclude: ["openlayers2dsceneeditor"]
+    }
   }
 });

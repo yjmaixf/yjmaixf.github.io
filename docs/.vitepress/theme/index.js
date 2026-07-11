@@ -3,7 +3,10 @@ import ControllerRecipesScenario from "./components/ControllerRecipesScenario.vu
 import EffectScenario from "./components/EffectScenario.vue";
 import InteractiveScenario from "./components/InteractiveScenario.vue";
 import LiveScenario from "./components/LiveScenario.vue";
+import { installCanvasReadbackHint } from "../../../src/utils/canvasReadback";
 import "./custom.css";
+
+installCanvasReadbackHint();
 
 export default {
   extends: DefaultTheme,

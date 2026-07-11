@@ -1,6 +1,6 @@
 # Playground
 
-这个页面嵌入真实 `ScenarioEditor`，并加载离线瓦片和模型图标资源。
+这个页面通过 `createScenarioEditor()` 初始化真实地图实例，并加载离线瓦片和模型图标资源。
 
 <ClientOnly>
   <LiveScenario variant="overview" height="640" />

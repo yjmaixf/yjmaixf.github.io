@@ -6,15 +6,16 @@
 import { createScenarioEditor } from "openlayers2dsceneeditor";
 
 const editor = createScenarioEditor();
-await editor.ready();
+await editor.init({
+  target: document.getElementById("map")
+});
 ```
 
 ## 推荐入口
 
 | 入口 | 说明 |
 | --- | --- |
-| `ScenarioEditor` | Vue 组件接入，适合直接渲染一个编辑器实例。 |
-| `createScenarioEditor()` | 获取共享 controller，适合单地图页面。 |
+| `createScenarioEditor()` | 1.0 推荐入口，适合通过 DOM target 初始化单地图页面。 |
 | `createScenarioEditor({ engine, context, mapApp })` | 创建绑定自定义地图引擎的 controller，适合多实例或测试。 |
 | `createMapEngine()` / `createMapContext()` | 高级入口，用于自行组织底层地图上下文。 |
 
