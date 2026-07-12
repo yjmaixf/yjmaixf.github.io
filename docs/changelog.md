@@ -1,5 +1,10 @@
 # 更新日志
 
+## 1.0.2
+
+- 增加 `index.d.ts` 类型声明入口。
+- 将 OpenLayers 声明为 peer dependency，业务项目建议显式安装 `ol`。
+
 ## 1.0.0
 
 - 发布 1.0 正式版：`latest` 标签指向无 Vue 运行时依赖的 JavaScript API 版本。

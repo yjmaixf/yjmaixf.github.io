@@ -1,18 +1,18 @@
 # 版本兼容
 
-当前文档基于 npm 包 `openlayers2dsceneeditor@1.0.0` 整理。
+当前文档基于 npm 包 `openlayers2dsceneeditor@1.0.2` 整理。
 
 ## 1.0 运行时依赖
 
 ```json
 {
-  "dependencies": {
+  "peerDependencies": {
     "ol": "^10.7.0"
   }
 }
 ```
 
-库本身不再声明 Vue runtime、Vue peer dependency 或 Vue 构建插件依赖。
+`ol` 从 1.0.2 起作为 peer dependency 声明，业务项目建议显式安装。库本身不再声明 Vue runtime、Vue peer dependency 或 Vue 构建插件依赖。
 
 ## 推荐环境
 

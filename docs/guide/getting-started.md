@@ -1,6 +1,6 @@
 # 快速开始
 
-`openlayers2dsceneeditor@1.0.0` 是基于 OpenLayers 的二维想定编辑与态势显示 JavaScript 库。1.0 起库本身不再依赖 Vue，也不再导出 `ScenarioEditor` Vue 组件。
+`openlayers2dsceneeditor@1.0.2` 是基于 OpenLayers 的二维想定编辑与态势显示 JavaScript 库。1.0 起库本身不再依赖 Vue，也不再导出 `ScenarioEditor` Vue 组件。
 
 官网仍然可以使用 Vue/VitePress 构建文档页面；业务项目接入库时只需要提供一个 DOM 容器。
 
@@ -8,6 +8,12 @@
 
 ```bash
 npm i openlayers2dsceneeditor
+```
+
+如果包管理器没有自动安装 peer dependency，请同时安装 OpenLayers：
+
+```bash
+npm i ol
 ```
 
 引入样式：
